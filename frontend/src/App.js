@@ -8,7 +8,7 @@ const App = () => {
     const [view, setView] = useState('addUser');
 
     return (
-        <Container className="mt-5 d-flex flex-column align-items-center container">
+        <Container className="mt-5 d-flex flex-column align-items-center">
             <Navbar bg="dark" variant="dark" expand="lg" className="navbar-rounded mb-4">
                 <Navbar.Brand href="#home">User Management</Navbar.Brand>
                 <Nav className="ml-auto">
@@ -28,7 +28,7 @@ const App = () => {
                     </Button>
                 </Nav>
             </Navbar>
-            <div className="form-container">
+            <div className="w-100">
                 {view === 'addUser' && <UserForm />}
                 {view === 'viewUsers' && <UserList />}
             </div>

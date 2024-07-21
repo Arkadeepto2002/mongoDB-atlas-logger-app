@@ -1,0 +1,8 @@
+.form-container {
+    max-width: 800px; /* Set the maximum width for the form */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.form-container .form-control {
+    margin-bottom: 1rem; /* Space between form fields */
+}

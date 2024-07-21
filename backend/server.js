@@ -4,11 +4,12 @@ const bodyParser = require('body-parser');
 const cors = require('cors'); // Import cors
 
 const app = express();
-const port = 5000;
+const port = 8000;
 
 app.use(bodyParser.json());
-app.use(cors()); // Use cors middleware
-
+app.use(cors({
+    origin: 'https://mongo-db-atlas-logger-mrg7lx533-arkadeeptos-projects.vercel.app',
+  }));
 const uri = 'mongodb+srv://admin-arkadeepto:bvSFh25RHBC6BLb@cluster.jzcialj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster';
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 

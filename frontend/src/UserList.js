@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { ListGroup, Spinner, Alert } from 'react-bootstrap';
 
 const UserList = () => {
     const [users, setUsers] = useState([]);
@@ -21,21 +22,21 @@ const UserList = () => {
         fetchUsers();
     }, []);
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>{error}</p>;
+    if (loading) return <Spinner animation="border" />;
+    if (error) return <Alert variant="danger">{error}</Alert>;
 
     return (
-        <ul>
+        <ListGroup>
             {users.length === 0 ? (
-                <p>No users found.</p>
+                <Alert variant="info">No users found.</Alert>
             ) : (
                 users.map((user) => (
-                    <li key={user._id}>
+                    <ListGroup.Item key={user._id}>
                         {user.name} - {user.email}
-                    </li>
+                    </ListGroup.Item>
                 ))
             )}
-        </ul>
+        </ListGroup>
     );
 };
 

@@ -11,7 +11,7 @@ const UserForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/addUser', { name, email });
+            await axios.post('https://acute-quintana-nonenow-0c12b24d.koyeb.app/addUser', { name, email });
             setName('');
             setEmail('');
             setMessage({ text: 'User added successfully!', type: 'success' });

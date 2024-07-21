@@ -10,7 +10,7 @@ const UserList = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/getUsers');
+                const response = await axios.get('https://acute-quintana-nonenow-0c12b24d.koyeb.app/getUsers');
                 setUsers(response.data);
                 setLoading(false);
             } catch (error) {

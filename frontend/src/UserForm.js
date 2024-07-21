@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Form, Button, Alert, Container } from 'react-bootstrap';
-import './UserForm.css'; // Import custom CSS file for form styling
+import './UserForm.css'; // Import custom CSS file
 
 const UserForm = () => {
     const [name, setName] = useState('');

@@ -8,7 +8,7 @@ const port = 8000;
 
 app.use(bodyParser.json());
 app.use(cors({
-    origin: '*',
+    origin: 'https://mongo-db-atlas-logger-app.vercel.app/',
   }));
 const uri = 'mongodb+srv://admin-arkadeepto:bvSFh25RHBC6BLb@cluster.jzcialj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster';
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
